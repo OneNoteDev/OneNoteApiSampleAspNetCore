@@ -14,12 +14,6 @@ DEMO: http://onenoteapisamplenetcore.azurewebsites.net/
 * [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads). 
 * [ASP.NET Core](https://www.asp.net/core)
 
-### Accounts
-**To use this Code Sample in your own Microsoft Account based app, be sure to do the following:**
-* As the developer, you'll need to [have a Microsoft account and get a client ID string](http://msdn.microsoft.com/EN-US/library/office/dn575426.aspx) so your app can authenticate. Get a client ID string and copy it into the file under [.../AspNetCoreSample/src/OneNoteApiSample/Config.cs](https://github.com/OneNoteDev/OneNoteAPISampleWinUniversal/blob/master/OneNoteServiceSamplesWinUniversal.Shared/OneNoteApi/LiveIdAuth.cs#L54) (~line 54).
-* Use the least permissible scopes by editing [.../AspNetCoreSample/src/OneNoteApiSample/Config.cs]
-**To use this Code Sample in your own Microsoft Office 365 based app, refer to the details in the blog [Support for work and school notebooks on Office 365](http://blogs.msdn.com/b/onenotedev/archive/2015/04/30/support-for-work-and-school-notebooks-on-office-365-in-preview.aspx)
-
 ### Using the sample
 
 After you've set up your development tools, and installed the prerequisites listed above,...
@@ -28,6 +22,7 @@ After you've set up your development tools, and installed the prerequisites list
 2. Open the project (.sln file) in Visual Studio.
 3. It is highly recommended that you get your own client ID, secret and redirect uri and copy it into
 	[Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9)
+	You can get your own appid, app secret and redirect uri [here](http://msdn.microsoft.com/EN-US/library/office/dn575426.aspx)
 4. Make a change to your machine (In windows, this is hosts file change) so the domain "onenoteapisamplenetcore.azurewebsites.net" (or the domain for the redirect URI you've chosen for your app) resolves to localhost or "127.0.0.1". Otherwise, authentication won't work.
 5. Build and run the application (F5)
 
