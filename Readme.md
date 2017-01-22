@@ -8,27 +8,11 @@ DEMO: http://onenoteapisamplenetcore.azurewebsites.net/
 * This is a small sample that shows how to use the OneNote API from an ASP.NET server.
 * It is configured to work for OneDrive only, but swapping AppIds/Auth urls would make it work with O365
 
-### Content
-
-You can find additional documentation at the links below.
-
-* Create Pages: 
-    * [POST simple HTML to a new OneNote Quick Notes page](http://msdn.microsoft.com/EN-US/library/office/dn575428.aspx)
-* Query and Search Pages:
-    *  [GET a paginated list of all pages in OneNote](http://dev.onenote.com/docs#/reference/get-pages)
-* Manage Notebooks and Sections:
-    * [GET a list of all notebooks](http://dev.onenote.com/docs#/reference/get-notebooks)
-    * [GET a list of all sections](http://dev.onenote.com/docs#/reference/get-sections)
-
 ### Prerequisites
 
-**Tools and Libraries** you will need to download, install, and configure for your development environment. 
+**Tools and Libraries** you will need to download, install, and configure for your development environment
 * [Visual Studio 2015 Update 3 or later](http://www.visualstudio.com/en-us/downloads). 
 * [ASP.NET Core](https://www.asp.net/core)
-
-* **NuGet packages** used in the sample. These are handled using the package manager, as described in the setup instructions. These should update automatically at build time; if not, make sure your NuGet package manager is up-to-date. You can learn more about the packages we used at the links below.
-    * [Newtonsoft Json.NET package](http://newtonsoft.com/) provides Json parsing utilities.
-    * Other Nuget packages from Microsoft, listed in project.json
 
 ### Accounts
 **To use this Code Sample in your own Microsoft Account based app, be sure to do the following:**
@@ -43,9 +27,21 @@ After you've set up your development tools, and installed the prerequisites list
 1. Download the repository as a ZIP file to your local computer, and extract the files. Or, clone the repository into a local copy of Git.
 2. Open the project (.sln file) in Visual Studio.
 3. It is highly recommended that you get your own client ID, secret and redirect uri and copy it into
-	[.../OneNoteServiceSamplesAspNetCore/src/Config.cs](TODO)
+	[Config.cs](https://github.com/OneNoteDev/OneNoteApiSampleAspNetCore/blob/master/src/OneNoteApiSample/Config.cs#L9)
 4. Make a change to your machine (In windows, this is hosts file change) so the domain "onenoteapisamplenetcore.azurewebsites.net" (or the domain for the redirect URI you've chosen for your app) resolves to localhost or "127.0.0.1". Otherwise, authentication won't work.
 5. Build and run the application (F5)
+
+### Content
+
+You can find additional documentation at the links below.
+
+* Create Pages: 
+    * [POST simple HTML to a new OneNote Quick Notes page](http://msdn.microsoft.com/EN-US/library/office/dn575428.aspx)
+* Query and Search Pages:
+    *  [GET a paginated list of all pages in OneNote](http://dev.onenote.com/docs#/reference/get-pages)
+* Manage Notebooks and Sections:
+    * [GET a list of all notebooks](http://dev.onenote.com/docs#/reference/get-notebooks)
+    * [GET a list of all sections](http://dev.onenote.com/docs#/reference/get-sections)
 
 #### Note
 As a sample, and for simplicity, this sample does not follow best practices for an application in Production. If you intent to ship this code, we recommend doing the following:
@@ -53,6 +49,10 @@ As a sample, and for simplicity, this sample does not follow best practices for 
 * Never check in app secrets to your repository
 * Require HTTPS throughout your site
 * Don't store unencrypted refresh tokens in cookies
+
+* **NuGet packages** used in the sample. These are handled using the package manager, as described in the setup instructions. These should update automatically at build time; if not, make sure your NuGet package manager is up-to-date. You can learn more about the packages we used at the links below.
+    * [Newtonsoft Json.NET package](http://newtonsoft.com/) provides Json parsing utilities.
+    * Other Nuget packages from Microsoft, listed in project.json
 
 ### Version Info
 
