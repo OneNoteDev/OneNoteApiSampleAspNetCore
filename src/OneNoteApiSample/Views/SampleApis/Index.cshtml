@@ -1,0 +1,32 @@
+﻿@using OneNoteApiSample
+
+@model List<OneNoteApiSample.SampleApis.SampleApi>
+
+@{
+	ViewData["Title"] = "Sample API list";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>All of the available API samples are below. Click on any of them to see them in action.</p>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var sampleApi in @Model)
+		{
+			<tr>
+				<td>
+					<a href="@ControllerRoutes.ParticularSampleApi(sampleApi.Name)">@sampleApi.Name</a>
+				</td>
+				<td>
+					<p class="text-muted">@sampleApi.Description</p>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

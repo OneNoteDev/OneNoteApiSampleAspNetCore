@@ -1,0 +1,15 @@
+﻿@using OneNoteApiSample.Auth;
+
+@{
+	ViewData["Title"] = "Home Page";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+	<div class="col-md-12">
+		<h4>To use the OneNote API sample, you have to login first</h4>
+		<ul>
+			<a href="@MsaAuthUtils.Instance.BuildUrl()">Sign in with your Microsoft account</a>
+		</ul>
+	</div>
+</div>

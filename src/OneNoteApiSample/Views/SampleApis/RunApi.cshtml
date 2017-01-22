@@ -1,0 +1,20 @@
+﻿@using OneNoteApiSample
+@model OneNoteApiSample.SampleApis.SampleApiResult
+
+@{
+	ViewData["Title"] = "Sample API list";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>Running the API @Model.SampleApi.Name</p>
+<p class="text-muted">@Model.SampleApi.Description</p>
+
+<h3>Request</h3>
+<pre>
+@Model.SerializedRequest
+</pre>
+
+<h3>Response</h3>
+<pre>
+@Model.SerializedResponse
+</pre>
